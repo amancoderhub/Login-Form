@@ -1,12 +1,13 @@
+
 <app-header></app-header>
 
-<div class="container">
+<div class="container" *ngIf="user">
     <h2>Profile Details</h2>
     <div class="user-deatils">
-        <p>Name: Aman</p>
-        <p>Email: Saurbh@gmail.com</p>
-        <p>Phone: 9595884890</p>
-        <p>Role: Admin|</p>
+        <p>Name: {{user.name}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Phone: {{user.phone}}</p>
+        <p>Role: {{user.role}}</p>
     </div>
 
 </div>

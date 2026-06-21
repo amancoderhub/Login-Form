@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceService } from 'src/app/core/services/service.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  constructor(){}
+  userName = localStorage.getItem('name');
 
+  private authService = inject(ServiceService);
+  private router = inject(Router)
+
+  logout(){
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 }

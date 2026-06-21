@@ -10,7 +10,7 @@
                     <input type="email" class="input" placeholder="Please Fill Name" formControlName="email" required>
                     <div *ngIf="loginForm.controls['email']?.invalid && (loginForm.controls['email']?.dirty || loginForm.controls['email']?.touched)">
                         <div class="help" *ngIf="loginForm.controls['email'].hasError('required')">
-                             Email must be required.
+                            Email must be required.
                         </div>
                         <div class="help" *ngIf="loginForm.controls['email'].hasError('pattern')">
                             Email must be in valid formet.
@@ -22,13 +22,13 @@
                     <input type="password" class="input" placeholder="Please Fill Password" formControlName="password" required>
                     <div *ngIf="loginForm.controls['password']?.invalid && (loginForm.controls['password']?.dirty || loginForm.controls['password']?.touched)" class="help">
                         <div class="help" *ngIf="loginForm.controls['password'].hasError('required')">
-                          Password must be required.
+                        Password must be required.
                         </div>
                         <div class="help" *ngIf="loginForm.controls['password'].hasError('minlength')">
-                          Password must be at least 6 characters long.
+                        Password must be at least 6 characters long.
                         </div>
                         <div class="help" *ngIf="loginForm.controls['password'].hasError('pattern')">
-                          Password must be Strong Add Special @, # Charecter.
+                        Password must be Strong Add Special @, # Charecter.
                         </div>
                     </div>
                 </div>
